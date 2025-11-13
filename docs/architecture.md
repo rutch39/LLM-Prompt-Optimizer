@@ -9,3 +9,6 @@
 
 ### Configuration Precedence
 Process environment variables always override default values defined in `config/defaults.json`.
+
+### Pagination Caps
+Enforce an upper page limit (`max_limit=100`) to keep memory footprint predictable under load.
