@@ -10,3 +10,8 @@ def missing_keys(payload: Dict, required: Iterable[str]) -> List[str]:
 
 def is_valid_slug(value: str) -> bool:
     return bool(SLUG_RE.match(str(value or '').strip()))
+
+
+def is_https_url(url: str) -> bool:
+    u = str(url or '').strip().lower()
+    return u.startswith('https://') and '.' in u[8:]
