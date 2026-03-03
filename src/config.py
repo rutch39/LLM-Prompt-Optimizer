@@ -17,3 +17,7 @@ def load_config() -> RuntimeConfig:
         max_retries=int(os.getenv('MAX_RETRIES', '3')),
         debug=os.getenv('DEBUG', '0').lower() in {'1', 'true', 'yes'},
     )
+
+
+def parse_csv_env(raw: str) -> list:
+    return [item.strip() for item in str(raw or '').split(',') if item.strip()]
