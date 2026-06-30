@@ -10,3 +10,7 @@ def compute_backoff(attempt: int, base: float = 0.5, cap: float = 30.0) -> float
 
 def is_retryable_status(status_code: int) -> bool:
     return status_code in RETRYABLE_CODES
+
+
+def linear_backoff(attempt: int, step: float = 1.5, cap: float = 20.0) -> float:
+    return round(min(cap, max(0.5, attempt * step)), 2)
