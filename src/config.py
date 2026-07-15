@@ -21,3 +21,11 @@ def load_config() -> RuntimeConfig:
 
 def parse_csv_env(raw: str) -> list:
     return [item.strip() for item in str(raw or '').split(',') if item.strip()]
+
+
+def parse_positive_int(raw, fallback: int = 1) -> int:
+    try:
+        val = int(str(raw).strip())
+        return val if val > 0 else fallback
+    except (TypeError, ValueError):
+        return fallback
