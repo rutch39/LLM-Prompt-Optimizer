@@ -25,3 +25,6 @@ All notable changes to this project are documented in this file.
 
 ### v1.0.8 (2026-07-08)
 - Stabilized timeout thresholds for slow upstream responses.
+
+### v1.0.9 (2026-08-03)
+- Added extra unit assertions for boundary inputs.
