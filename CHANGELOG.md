@@ -28,3 +28,6 @@ All notable changes to this project are documented in this file.
 
 ### v1.0.9 (2026-08-03)
 - Added extra unit assertions for boundary inputs.
+
+### v1.1.0 (2026-09-11)
+- Improved latency summary calculations for diagnostic snapshots.
